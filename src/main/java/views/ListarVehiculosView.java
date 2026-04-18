@@ -9,9 +9,6 @@ import javax.swing.table.TableModel;
 
 public class ListarVehiculosView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ListarAnimalesView
-     */
     public ListarVehiculosView() {
         initComponents();
         listarVehiculos();
@@ -201,6 +198,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
             }
         });
     }
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton calcularConsumos;
