@@ -24,7 +24,7 @@ public class Persistencia {
         sucursales.add(s2);
     }
     
-    private static void inicializarVehiculos(){
+   /* private static void inicializarVehiculos(){
         Sucursal s1 = sucursales.get(0);
         Sucursal s2 = sucursales.get(1);
         
@@ -37,13 +37,15 @@ public class Persistencia {
         vehiculos.add(v1);
         vehiculos.add(v2);
         vehiculos.add(v3);
-        vehiculos.add(v4);
-    }
+        vehiculos.add(v4); 
+    } */
     
     public static ArrayList<Vehiculo> getVehiculos(){
         return vehiculos;
     }
-    
+    public static ArrayList<Sucursal> getSucursales() {
+    return sucursales;
+}
     public static Optional<Vehiculo> getVehiculo(String patente){
         return vehiculos.stream()
                 .filter(v -> v.getPatente().equals(patente))
@@ -53,6 +55,6 @@ public class Persistencia {
     public static void inicializar(){
         inicializarResponsables();
         inicializarSucursales();
-        inicializarVehiculos();
+       // inicializarVehiculos();
     }
 }
