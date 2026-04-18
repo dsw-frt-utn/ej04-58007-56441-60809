@@ -1,20 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package views;
+import domain.Marca;
 
-/**
- *
- * @author admin
- */
 public class AltaVehiculo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AltaVehiculo
-     */
     public AltaVehiculo() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -224,7 +215,7 @@ public class AltaVehiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-       
+            
 String patente = txtPatente.getText();
 String marcaTexto = txtMarca.getText(); 
 String modelo = txtModelo.getText();
@@ -246,7 +237,7 @@ if (tipo.equals("E")) {
     double kwh = Double.parseDouble(txtKBase.getText());
     
     
-    domain.VehiculoElectrico ve = new domain.VehiculoElectrico(patente, marcaTexto, modelo, anio, carga, sucursalAsignada, kwh);
+    domain.VehiculoElectrico ve = new domain.VehiculoElectrico(patente, new Marca(marcaTexto), modelo, anio, carga, sucursalAsignada, kwh);
     data.Persistencia.getVehiculos().add(ve);
     
     javax.swing.JOptionPane.showMessageDialog(this, "Vehículo Eléctrico guardado con éxito!");
@@ -258,7 +249,7 @@ if (tipo.equals("E")) {
     double litrosExtra = Double.parseDouble(txtLitrosE.getText());
     
     
-    domain.VehiculoCombustible vc = new domain.VehiculoCombustible(patente, marcaTexto, modelo, anio, carga, sucursalAsignada, kmLitro, litrosExtra);
+    domain.VehiculoCombustible vc = new domain.VehiculoCombustible(patente, new Marca(marcaTexto), modelo, anio, carga, sucursalAsignada, kmLitro, litrosExtra);
     data.Persistencia.getVehiculos().add(vc);
     
     javax.swing.JOptionPane.showMessageDialog(this, "Vehículo a Combustible guardado con éxito!");
