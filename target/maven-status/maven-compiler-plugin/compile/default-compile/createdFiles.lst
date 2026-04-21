@@ -9,13 +9,16 @@ domain\VehiculoElectrico.class
 views\Controlador.class
 views\AltaVehiculo$1.class
 views\AltaVehiculo.class
+views\ListarVehiculosView$4.class
 app\Program.class
 views\Menu$1.class
 views\AltaVehiculo$2.class
 views\VehiculoViewModel.class
 views\ListarVehiculosView.class
+views\ListarVehiculosView$3.class
 views\Menu$2.class
 domain\Sucursal.class
 views\ListarVehiculosView$2.class
 domain\VehiculoTipo.class
+views\AltaVehiculo$3.class
 views\Menu$3.class
