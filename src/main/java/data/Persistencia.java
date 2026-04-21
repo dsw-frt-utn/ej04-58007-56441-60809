@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 public class Persistencia {
-    private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+    public static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
     private static ArrayList<Responsable> responsables = new ArrayList<>();
     private static ArrayList<Sucursal> sucursales = new ArrayList<>();
     
@@ -24,7 +24,7 @@ public class Persistencia {
         sucursales.add(s2);
     }
     
-   /* private static void inicializarVehiculos(){
+    private static void inicializarVehiculos(){
         Sucursal s1 = sucursales.get(0);
         Sucursal s2 = sucursales.get(1);
         
@@ -38,7 +38,7 @@ public class Persistencia {
         vehiculos.add(v2);
         vehiculos.add(v3);
         vehiculos.add(v4); 
-    } */
+    } 
     
     public static ArrayList<Vehiculo> getVehiculos(){
         return vehiculos;

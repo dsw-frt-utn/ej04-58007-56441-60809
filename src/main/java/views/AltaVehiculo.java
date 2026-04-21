@@ -1,20 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package views;
+import domain.Marca;
 
-/**
- *
- * @author admin
- */
 public class AltaVehiculo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AltaVehiculo
-     */
     public AltaVehiculo() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -52,6 +43,9 @@ public class AltaVehiculo extends javax.swing.JFrame {
         txtLitrosE = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -97,14 +91,23 @@ public class AltaVehiculo extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
         jLabel11.setText("REGISTRO DE VEHICULO");
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel12.setText("C para guardar Vehiculo con Combustible");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel13.setText("E para guardar vehiculo Electico ");
+
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,20 +155,32 @@ public class AltaVehiculo extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(79, 79, 79)
+                        .addComponent(txtCap, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
-                                .addComponent(txtCap, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnGuardar)
-                        .addGap(108, 108, 108))))
+                        .addGap(76, 76, 76))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(99, 99, 99))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(192, 192, 192)
+                        .addComponent(jLabel11))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,8 +196,7 @@ public class AltaVehiculo extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
-                            .addComponent(txtKmL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addComponent(txtKmL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
@@ -205,77 +219,81 @@ public class AltaVehiculo extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(26, 26, 26)
+                    .addComponent(jLabel5)
+                    .addComponent(btnGuardar))
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel13)
+                        .addGap(8, 8, 8))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(2, 2, 2)
-                        .addComponent(btnGuardar)
-                        .addGap(2, 2, 2)
+                        .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(txtCap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(95, Short.MAX_VALUE))
+                            .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-       
-String patente = txtPatente.getText();
-String marcaTexto = txtMarca.getText(); 
-String modelo = txtModelo.getText();
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {                                           
+            
+        String patente = txtPatente.getText();
+        String marcaTexto = txtMarca.getText();
+        String modelo = txtModelo.getText();
+        int anio = Integer.parseInt(txtAño.getText());
+        double carga = Double.parseDouble(txtCap.getText());
+        String tipo = txtTipo.getText().toUpperCase();
 
+        domain.Sucursal sucursalAsignada = data.Persistencia.getSucursales().get(0);
 
-int anio = Integer.parseInt(txtAño.getText());
-double carga = Double.parseDouble(txtCap.getText());
-
-
-String tipo = txtTipo.getText().toUpperCase();
-
-
-domain.Sucursal sucursalAsignada = data.Persistencia.getSucursales().get(0);
-
-
-if (tipo.equals("E")) {
+            if (tipo.equals("E")) {
     
-    
-    double kwh = Double.parseDouble(txtKBase.getText());
-    
-    
-    domain.VehiculoElectrico ve = new domain.VehiculoElectrico(patente, marcaTexto, modelo, anio, carga, sucursalAsignada, kwh);
-    data.Persistencia.getVehiculos().add(ve);
-    
-    javax.swing.JOptionPane.showMessageDialog(this, "Vehículo Eléctrico guardado con éxito!");
+            double kwh = Double.parseDouble(txtKBase.getText());      
+            domain.VehiculoElectrico ve = new domain.VehiculoElectrico(patente, new Marca(marcaTexto), modelo, anio, carga, sucursalAsignada, kwh);
+            data.Persistencia.getVehiculos().add(ve);   
+            javax.swing.JOptionPane.showMessageDialog(this, "Vehículo Eléctrico guardado con éxito!");
 
-} else if (tipo.equals("C")) {
-    
+}           else if (tipo.equals("C")) {
    
-    double kmLitro = Double.parseDouble(txtKmL.getText());
-    double litrosExtra = Double.parseDouble(txtLitrosE.getText());
+            double kmLitro = Double.parseDouble(txtKmL.getText());
+            double litrosExtra = Double.parseDouble(txtLitrosE.getText());
+            domain.VehiculoCombustible vc = new domain.VehiculoCombustible(patente, new Marca(marcaTexto), modelo, anio, carga, sucursalAsignada, kmLitro, litrosExtra);
+            data.Persistencia.getVehiculos().add(vc);    
+            javax.swing.JOptionPane.showMessageDialog(this, "Vehículo a Combustible guardado con éxito!");
     
+}           else {
+                javax.swing.JOptionPane.showMessageDialog(this, "Error: En la cajita 'Tipo' tenés que escribir E o C.");
+    }
+            limpiarCampos();
+            
+            
+            
+        }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        this.dispose();
+    }   
     
-    domain.VehiculoCombustible vc = new domain.VehiculoCombustible(patente, marcaTexto, modelo, anio, carga, sucursalAsignada, kmLitro, litrosExtra);
-    data.Persistencia.getVehiculos().add(vc);
+        private void limpiarCampos() {
     
-    javax.swing.JOptionPane.showMessageDialog(this, "Vehículo a Combustible guardado con éxito!");
-    
-    txtPatente.setText("");
-        txtMarca.setText("");
-        txtModelo.setText("");
-        txtAño.setText("");
-        txtCap.setText("");
-        txtTipo.setText("");
-        txtKBase.setText("");
-        txtKmL.setText("");
-        txtLitrosE.setText("");
-} else {
-    javax.swing.JOptionPane.showMessageDialog(this, "Error: En la cajita 'Tipo' tenés que escribir E o C.");
-    }//GEN-LAST:event_btnGuardarActionPerformed
- }
+            txtPatente.setText("");
+            txtMarca.setText("");
+            txtModelo.setText("");
+            txtAño.setText("");
+            txtCap.setText("");
+            txtTipo.setText("");
+            txtKBase.setText("");
+            txtKmL.setText("");
+            txtLitrosE.setText("");
+            txtPais.setText("");
+}
     /**
      * @param args the command line arguments
      */
@@ -311,11 +329,15 @@ if (tipo.equals("E")) {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
